@@ -21,11 +21,14 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml    
+      - name: Compile only
+        run: mvn -B compile --file pom.xml
 
-      - name: Run unit tests
+      - name: Run tests
         run: mvn -B test --file pom.xml
+
+      - name: Package (skip tests)
+        run: mvn -B package -DskipTests --file pom.xml
 
       - name: Run main class
         run: mvn -B exec:java -Dexec.mainClass="com.ejemplo.App" --file pom.xml
