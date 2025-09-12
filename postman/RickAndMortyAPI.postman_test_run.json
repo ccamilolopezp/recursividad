@@ -1,0 +1,108 @@
+{
+	"id": "0a95fe09-2316-4d29-b428-7f0e72f7f294",
+	"name": "RickAndMortyAPI",
+	"timestamp": "2025-09-12T17:58:06.977Z",
+	"collection_id": "43954689-df3ab54d-fe5a-4b58-b62c-43ba6963d55e",
+	"folder_id": 0,
+	"environment_id": "43954689-55abfe5c-892e-4136-b797-2f618f9b3341",
+	"totalPass": 6,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-09-12T17:58:06.038Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "71d24617-83c7-4d2b-90a7-df5ec3eaf736",
+			"name": "Get all characters",
+			"url": "https://rickandmortyapi.com/api/character",
+			"time": 296,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Results is an array": true,
+				"Every character has id, name and status": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Results is an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Every character has id, name and status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				296
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Results is an array": true,
+					"Every character has id, name and status": true
+				}
+			]
+		},
+		{
+			"id": "b0ea556a-9cb9-435b-a1d4-56c082efaca3",
+			"name": "Get character by ID",
+			"url": "https://rickandmortyapi.com/api/character/1",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status 200": true,
+				"Character has mandatory fields": true,
+				"Character matches the requested id": true
+			},
+			"testPassFailCounts": {
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Character has mandatory fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Character matches the requested id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				95
+			],
+			"allTests": [
+				{
+					"Status 200": true,
+					"Character has mandatory fields": true,
+					"Character matches the requested id": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 391,
+	"collection": {
+		"requests": [
+			{
+				"id": "71d24617-83c7-4d2b-90a7-df5ec3eaf736",
+				"method": "GET"
+			},
+			{
+				"id": "b0ea556a-9cb9-435b-a1d4-56c082efaca3",
+				"method": "GET"
+			}
+		]
+	}
+}
