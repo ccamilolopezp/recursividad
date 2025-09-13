@@ -27,7 +27,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        int numero = 6;
+        int numero = 12;
         System.out.println("Factorial de " + numero + " es: " + factorial(numero));
     }
 }
